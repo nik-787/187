@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Cursed Sh!t</title>
+ </head>
+ <body>
+
+   <h1><font color="black" font face="minecraft">HERZLICH WILKOMMEN DU LOSER!</font></h1> 
+   <img src="images/Spydermen.jpg"><br>
+   <audio controls src="images/HPTs Fail Cover.mp3"> </audio>
+
+   <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #cookie {
+      cursor: pointer;
+    }
+  </style>
+  </head>
+  <body>
+  <h1>Cookie Clicker</h1>
+  <img id="cookie" src="C:\Users\Nik\Desktop\HTML\ErstesProjekt\images\cookie.png" width="200" height="200" onclick="cookieClick()">
+  <p>Cookies: <span id="cookieCount">0</span></p>
+  <button onclick="buyUpgrade()">Buy Upgrade (500 Cookies)</button>
+  <p>Upgrades: <span id="upgradeCount">0</span></p>
+  
+  <script>
+    var cookies = 0;
+    var upgrades = 0;
+    var clickValue = 1; // Wert pro Klick
+  
+    function cookieClick() {
+      cookies += clickValue;
+      document.getElementById("cookieCount").textContent = cookies;
+    }
+  
+    function buyUpgrade() {
+      if (cookies >= 500) {
+        cookies -= 500;
+        upgrades++;
+        clickValue *= 2; // Verdoppelt den Wert pro Klick
+        document.getElementById("cookieCount").textContent = cookies;
+        document.getElementById("upgradeCount").textContent = upgrades;
+        setTimeout(function() {
+          // Kauf-Upgrade-Funktionalität hier einfügen
+        }, 1000); // 1 Sekunde Verzögerung für den Effekt
+      } else {
+        alert("Not enough cookies!");
+      }
+    }
+  
+    // Hier können Sie die Funktionalität für Ihre Upgrades implementieren, wenn Sie mehr als nur einen zählen möchten.
+  
+  </script>
+  </body>
+ </body>
+</html>
